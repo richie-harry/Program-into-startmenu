@@ -1,0 +1,30 @@
+To add an AppImage to the start menu in Debian Linux, you need to create a .desktop file for it.
+
+1. Create a .desktop file:
+
+mkdir -p ~/.local/share/applications // #create if it doesnt exist;
+
+cd ~/.local/share/applications
+
+2. Create a new .desktop file:
+
+Use a text editor to create a new file with a .desktop extension, e.g., program.desktop:
+
+nano program.desktop
+
+3. Edit the .desktop file:
+
+[Desktop Entry]
+Version=1.0
+Name=Your Program Name
+Comment=A short description of your program
+Exec=/path/to/your/program.AppImage
+Icon=/path/to/your/icon.png
+Terminal=false
+Type=Application
+Categories=Utility;Application;
+
+4. Refresh the application database:
+
+update-desktop-database ~/.local/share/applications
+
